@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <!------------------------------------------------------------------------------------->
+
+    <!--------------------jQuery----------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!------------------------------------------------------------------------------------->
+
+    <!--------------------スライダー動かすやつ----------------------------------------------->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+</head>
+<style>
+    /*--------画像サイズ調整---------*/
+    
+    img {
+        width: 100%;
+    }
+    /*-----------height調整----------*/
+    
+    .slick-slide {
+        height: auto!important;
+    }
+    /*-----------矢印表示----------*/
+    
+    .slick-next {
+        right: 0!important;
+    }
+    
+    .slick-prev {
+        left: 0!important;
+    }
+    
+    .slick-arrow {
+        width: initial!important;
+        height: initial!important;
+        z-index: 2!important;
+    }
+    
+    .slick-arrow:before {
+        font-size: 30px!important;
+    }
+</style>
+
+<body>
+    <div class="slider">
+        <div><img src="img/img01.png"></div>
+        <div><img src="img/img02.png"></div>
+        <div><img src="img/img03.png"></div>
+    </div>
+</body>
+<script>
+    $('.slider').slick({
+        autoplay: true, //自動再生
+        autoplaySpeed: 2000, //自動再生のスピード
+        speed: 800, //スライドするスピード
+        dots: true, //スライドしたのドット
+        arrows: true, //左右の矢印
+        infinite: true, //スライドのループ
+        pauseOnHover: false, //ホバーしたときにスライドを一時停止しない　
+    });
+</script>
+
+</html>
